@@ -18,3 +18,18 @@ onMyBirthDay(false)
 .catch((data)=>{
     console.log(data);
 })
+    .finally(() => {
+        console.log("Party");
+    });
+
+onMyBirthDay(true)
+.then((data)=>{
+    console.log(data);
+
+})
+.catch((data)=>{
+    console.log(data)
+})
+    .finally(() => {
+        console.log("Party");
+    });
