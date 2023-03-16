@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time Countdown</title>
+</head>
+<body>
+<input id="number" type="number" placeholder="Nhap vao so bat dau">
+<button onclick="show()">bat dau</button>
+<p id="number1"></p>
+
+<script>
+    function show() {
+        let starNumber = document.getElementById("number").value;
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms))
+        }
+
+        async function TimeCountdown(number) {
+            while (number > 0) {
+                document.getElementById("number1").innerHTML =`time out :${number}`;
+                await sleep(1000);
+                number--;
+            }
+            document.getElementById(`number1`).innerHTML = "counter finished"
+        }
+
+        TimeCountdown(starNumber).then(() => {
+            document.getElementById("number1").innerHTML
+        })
+    }
+
+
+</script>
+
+
+</body>
+</html>
