@@ -1,6 +1,6 @@
 let onMyBirthDay = (iskayosick) => {
     return new Promise((resolve, reject) => {
-        setInterval(() => {
+        setTimeout(() => {
             if (!iskayosick) {
                 resolve("i have " + 2 + " cake ");
             } else {
